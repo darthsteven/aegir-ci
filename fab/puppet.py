@@ -9,4 +9,4 @@ def puppet():
 
 def run_puppet(color='true'):
     """run puppet to get the config applied."""
-    local('puppet apply --color=%s --verbose --modulepath=/opt/pergola/puppet/modules /opt/pergola/puppet/pergola.pp' % color, capture=False)
+    local('puppet apply --color=%s --verbose --modulepath=/opt/aegir-ci/puppet/modules /opt/aegir-ci/puppet/aegir-ci.pp' % color, capture=False)

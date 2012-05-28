@@ -1,13 +1,7 @@
-Pergola
-=======
+Aegir-ci
+========
 
-A setup script for a high performance Drupal.
-
-Requirements
-------------
-
-Currently Pergola ONLY supports Debian based distributions, notably anything 
-other than Ubuntu 10.04 may fail to work.
+A setup script for Aegir's Continuous integration server.
 
 Installation
 ------------
@@ -18,11 +12,11 @@ You can install this via the command line with either 'curl' or 'wget'.
 
 #### via curl
 
-    curl -L https://github.com/computerminds/pergola/raw/master/tools/install.sh | sh
+    curl -L https://github.com/darthsteven/aegir-ci/raw/master/tools/install.sh | sh
 
 #### via wget
 
-    wget --no-check-certificate https://github.com/computerminds/pergola/raw/master/tools/install.sh -qO - | sh
+    wget --no-check-certificate https://github.com/darthsteven/aegir-ci/raw/master/tools/install.sh -qO - | sh
 
 ### Manual installation
 
@@ -30,6 +24,6 @@ You can install this via the command line with either 'curl' or 'wget'.
 
     apt-get update
     apt-get install git-core
-    git clone git://github.com/computerminds/pergola.git -b dev /opt/pergola
-    cd /opt/pergola
+    git clone git://github.com/darthsteven/aegir-ci.git -b dev /opt/aegir-ci
+    cd /opt/aegir-ci
     python setup.py

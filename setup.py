@@ -4,7 +4,7 @@ def deploy():
     """Install pre-req packages and fabric, then run fab initialize.
 
     """
-    
+
     # We probably don't need these, remove them if and when we can.
     packages = [
     #            'python-configobj',
@@ -20,7 +20,7 @@ def deploy():
 
     os.system('apt-get install -y %s' % ' '.join(packages))
     os.system('pip install fabric==0.9.3')
-    os.system('cd /opt/pergola/fab && fab initialize')
+    os.system('cd /opt/aegir-ci/fab && fab initialize')
 
 if __name__ == '__main__':
     deploy()
