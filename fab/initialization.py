@@ -5,7 +5,6 @@ import tempfile
 from fabric.api import *
 
 from puppet import *
-from mysql import *
 
 def initialize():
     '''Initialize the Aegir CI system.'''
