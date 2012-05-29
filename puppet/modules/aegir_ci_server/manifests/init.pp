@@ -9,4 +9,6 @@ class aegir_ci_server() {
   # Ensure the auto updater is around
   class { aegir_ci_updater:
   }
+  class { aegir_ci_jenkins:
+  }
 }
