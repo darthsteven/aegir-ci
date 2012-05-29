@@ -34,9 +34,7 @@ def _initialize_fabric():
         local('ln -s /usr/local/bin/fab /usr/bin/fab')
 
 def _initialize_git_repo():
-    """Update the git submodules"""
-    local('cd /opt/aegir-ci && git submodule init')
-    local('cd /opt/aegir-ci && git submodule update')
+    pass
 
 def _initialize_puppet():
     """Install puppet and set things up."""
