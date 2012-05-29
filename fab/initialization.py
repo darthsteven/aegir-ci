@@ -45,7 +45,7 @@ def _initialize_puppet():
 def _initialize_packages():
     """Install apt-get and set things up."""
 
-    local("echo 'deb http://backports.debian.org/debian-backports squeeze-backports all' > /etc/apt/sources.list.d/squeeze-backports.list")
+    local("echo 'deb http://backports.debian.org/debian-backports squeeze-backports main' > /etc/apt/sources.list.d/squeeze-backports.list")
     local('touch /etc/apt/preferences.d/squeeze-backports-pin-100')
     local("echo 'Package: *' >> /etc/apt/preferences.d/squeeze-backports-pin-100")
     local("echo 'Pin: release a=squeeze-backports' >> /etc/apt/preferences.d/squeeze-backports-pin-100")
