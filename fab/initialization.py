@@ -41,14 +41,14 @@ def _initialize_git_repo():
 
 def _initialize_puppet():
     """Install puppet and set things up."""
-    local('apt-get install --yes -t lucid-backports puppet')
+    local('apt-get install --yes -t squeeze-backports puppet')
 
 def _initialize_packages():
     """Install apt-get and set things up."""
 
-    local("echo 'deb http://archive.ubuntu.com/ubuntu lucid-backports main restricted universe multiverse' > /etc/apt/sources.list.d/lucid-backports.list")
-    local('touch /etc/apt/preferences.d/lucid-backports-pin-100')
-    local("echo 'Package: *' >> /etc/apt/preferences.d/lucid-backports-pin-100")
-    local("echo 'Pin: release a=lucid-backports' >> /etc/apt/preferences.d/lucid-backports-pin-100")
-    local("echo 'Pin-Priority: 100' >> /etc/apt/preferences.d/lucid-backports-pin-100")
+    local("echo 'deb http://backports.debian.org/debian-backports squeeze-backports all' > /etc/apt/sources.list.d/squeeze-backports.list")
+    local('touch /etc/apt/preferences.d/squeeze-backports-pin-100')
+    local("echo 'Package: *' >> /etc/apt/preferences.d/squeeze-backports-pin-100")
+    local("echo 'Pin: release a=squeeze-backports' >> /etc/apt/preferences.d/squeeze-backports-pin-100")
+    local("echo 'Pin-Priority: 100' >> /etc/apt/preferences.d/squeeze-backports-pin-100")
     local('apt-get update')
